@@ -1,0 +1,9 @@
+#file: ./uninstall
+
+/scoreboard objectives remove ac_temp
+
+/execute if score datapack_list datapack_list matches 1.. run scoreboard players reset ac_lib datapack_list
+
+#file: ./datapack_list_init
+
+/execute if score datapack_list datapack_list matches 1.. run scoreboard players set ac_lib datapack_list 1

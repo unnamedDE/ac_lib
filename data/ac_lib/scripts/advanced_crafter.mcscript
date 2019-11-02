@@ -371,8 +371,8 @@ positioned('~ ~1 ~') {
 }
 
 #file: ./advanced_crafter/crafted
-modal craftedUtility(slot) {
-  if(!'block ~ ~ ~ barrel{Items:[{Slot:$(slot)b,tag:{ac_lib:{CraftingTool:1}}}]}') {
+modal craftedUtility(slot, slotname) {
+  if(!'block ~ ~ ~ barrel{Items:[{Slot:$(slot)b,tag:{ac_lib:{CraftingTool:1}}}]}' && !'entity @s[tag=ac_lib_keep_$(slotname)]') {
     /execute store result score @s ac_temp run data get block ~ ~ ~ Items[{Slot:$(slot)b}].Count
     /scoreboard players remove @s ac_temp 1
     /execute store result block ~ ~ ~ Items[{Slot:$(slot)b}].Count byte 1 run scoreboard players get @s ac_temp
@@ -380,18 +380,18 @@ modal craftedUtility(slot) {
   /scoreboard players reset @s ac_temp
 }
 
-craftedUtility(1)
-craftedUtility(2)
-craftedUtility(3)
-craftedUtility(10)
-craftedUtility(11)
-craftedUtility(12)
-craftedUtility(19)
-craftedUtility(20)
-craftedUtility(21)
-craftedUtility(5)
-craftedUtility(14)
-craftedUtility(23)
+craftedUtility(1,0)
+craftedUtility(2,1)
+craftedUtility(3,2)
+craftedUtility(10,3)
+craftedUtility(11,4)
+craftedUtility(12,5)
+craftedUtility(19,6)
+craftedUtility(20,7)
+craftedUtility(21,8)
+craftedUtility(5,9)
+craftedUtility(14,10)
+craftedUtility(23,11)
 
 
 #file: ./advanced_crafter/recipes/test
@@ -459,3 +459,145 @@ if(!'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:23b,id:"minecraft:diamo
 /replaceitem block ~ ~ ~ container.16 minecraft:air
 /tag @s remove ac_lib_advanced_crafter_crafted
 /tag @s remove ac_lib_advanced_crafter_crafted_test
+
+#file: ./advanced_crafter/recipes/test_keep
+
+if('entity @s[tag=!ac_lib_advanced_crafter_crafted]' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:1b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:2b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:3b}]}' && 'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:10b,id:"minecraft:diamond_axe"}]}' && 'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:11b,id:"minecraft:oak_log"}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:12b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:19b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:20b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:21b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:5b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:14b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:23b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot: 7b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot: 16b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot: 25b}]}') {
+  /function ac_lib:advanced_crafter/recipes/test_keep/1
+}
+if('entity @s[tag=ac_lib_advanced_crafter_crafted_test_keep]' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:1b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:2b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:3b}]}' && 'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:10b,id:"minecraft:diamond_axe"}]}' && 'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:11b,id:"minecraft:oak_log"}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:12b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:19b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:20b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:21b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:5b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:14b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:23b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot: 16b,Count:1b,id:"minecraft:stripped_oak_log"}]}') {
+  /function ac_lib:advanced_crafter/recipes/test_keep/2
+}
+if('entity @s[tag=ac_lib_advanced_crafter_crafted_test_keep]' && 'block ~ ~ ~ minecraft:gray_shulker_box') {
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:1b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_keep/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:2b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_keep/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:3b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_keep/3
+  }
+  if(!'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:10b,id:"minecraft:diamond_axe"}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_keep/3
+  }
+  if(!'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:11b,id:"minecraft:oak_log"}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_keep/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:12b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_keep/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:19b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_keep/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:20b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_keep/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:21b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_keep/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:5b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_keep/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:14b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_keep/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:23b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_keep/3
+  }
+}
+
+#file: ./advanced_crafter/recipes/test_keep/1
+
+/replaceitem block ~ ~ ~ container.16 minecraft:stripped_oak_log 1
+//Add here what should happen when you put in the correct recipe
+/tag @s add ac_lib_keep_3
+/tag @s add ac_lib_advanced_crafter_crafted
+/tag @s add ac_lib_advanced_crafter_crafted_test_keep
+
+#file: ./advanced_crafter/recipes/test_keep/2
+
+/function ac_lib:advanced_crafter/crafted
+//Add here what should happen when you take the output out
+/tag @s remove ac_lib_keep_3
+/tag @s remove ac_lib_advanced_crafter_crafted
+/tag @s remove ac_lib_advanced_crafter_crafted_test_keep
+
+#file: ./advanced_crafter/recipes/test_keep/3
+
+/replaceitem block ~ ~ ~ container.16 minecraft:air
+//Add here what should happen if you cancel the recipe
+/tag @s remove ac_lib_keep_3
+/tag @s remove ac_lib_advanced_crafter_crafted
+/tag @s remove ac_lib_advanced_crafter_crafted_test_keep
+
+#file: ./advanced_crafter/recipes/test_command
+
+if('entity @s[tag=!ac_lib_advanced_crafter_crafted]' && 'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:1b,id:"minecraft:torch"}]}' && 'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:2b,id:"minecraft:popped_chorus_fruit"}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:3b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:10b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:11b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:12b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:19b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:20b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:21b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:5b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:14b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:23b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot: 7b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot: 16b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot: 25b}]}') {
+  /function ac_lib:advanced_crafter/recipes/test_command/1
+}
+if('entity @s[tag=ac_lib_advanced_crafter_crafted_test_command]' && 'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:1b,id:"minecraft:torch"}]}' && 'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:2b,id:"minecraft:popped_chorus_fruit"}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:3b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:10b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:11b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:12b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:19b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:20b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:21b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:5b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:14b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:23b}]}' && !'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot: 16b,Count:1b,id:"minecraft:end_rod"}]}') {
+  /function ac_lib:advanced_crafter/recipes/test_command/2
+}
+if('entity @s[tag=ac_lib_advanced_crafter_crafted_test_command]' && 'block ~ ~ ~ minecraft:gray_shulker_box') {
+  if(!'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:1b,id:"minecraft:torch"}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_command/3
+  }
+  if(!'block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:2b,id:"minecraft:popped_chorus_fruit"}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_command/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:3b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_command/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:10b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_command/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:11b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_command/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:12b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_command/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:19b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_command/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:20b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_command/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:21b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_command/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:5b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_command/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:14b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_command/3
+  }
+  if('block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:23b}]}') {
+    /function ac_lib:advanced_crafter/recipes/test_command/3
+  }
+}
+
+#file: ./advanced_crafter/recipes/test_command/1
+
+/replaceitem block ~ ~ ~ container.16 minecraft:end_rod 1
+//Add here what should happen when you put in the correct recipe
+/say init
+/tag @s add ac_lib_advanced_crafter_crafted
+/tag @s add ac_lib_advanced_crafter_crafted_test_command
+
+#file: ./advanced_crafter/recipes/test_command/2
+
+/function ac_lib:advanced_crafter/crafted
+//Add here what should happen when you take the output out
+/say craft
+/tag @s remove ac_lib_advanced_crafter_crafted
+/tag @s remove ac_lib_advanced_crafter_crafted_test_command
+
+#file: ./advanced_crafter/recipes/test_command/3
+
+/replaceitem block ~ ~ ~ container.16 minecraft:air
+//Add here what should happen if you cancel the recipe
+/say cancel
+/tag @s remove ac_lib_advanced_crafter_crafted
+/tag @s remove ac_lib_advanced_crafter_crafted_test_command
