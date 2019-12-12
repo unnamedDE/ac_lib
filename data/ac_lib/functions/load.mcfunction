@@ -7,3 +7,4 @@
 function ac_lib:mcscript/load
 
 scoreboard objectives add ac_temp dummy
+scoreboard objectives add ac_creative_menu dummy

@@ -4,4 +4,7 @@
 // executes 20 times a second
 
 /function ac_lib:advanced_crafter/main
+as(@a) {
+  /function ac_lib:creative_menu/give
+}
 /clear @a minecraft:gray_stained_glass_pane{Placeholder:1}
