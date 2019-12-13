@@ -11,6 +11,6 @@ tellraw @s {"text":""}
 #Advanced Crafter
 tellraw @s [{"text":"► ["},{"text":"1","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ac_creative_menu 11"}},{"text":"] [","color":"reset"},{"text":"16","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ac_creative_menu 21"}},{"text":"] ","color":"reset"},{"text":"Advanced Crafting Table"}]
 tellraw @s {"text":""}
-tellraw @s [{"text":" ↑ ","color":"red"},{"text":"Return to main menu","hoverEvent":{"action":"show_text","value":"Click to return"},"clickEvent":{"action":"run_command","value":"/function unnamedde:creative_menu"}}]
+tellraw @s [{"text":" ↑ ","color":"red"},{"text":"Return to main menu","hoverEvent":{"action":"show_text","value":"Click to return"},"clickEvent":{"action":"run_command","value":"/function unnamed-core:creative_menu"}}]
 tellraw @s {"text":""}
 tellraw @s {"text":""}
