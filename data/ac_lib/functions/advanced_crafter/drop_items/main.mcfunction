@@ -12,6 +12,8 @@ execute if data entity @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraf
 
 execute if data entity @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:gray_shulker_box",Count:1b}}] Item.tag.BlockEntityTag.Items[{Slot:5b}] run function ac_lib:advanced_crafter/drop_items/5
 
+execute if data entity @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:gray_shulker_box",Count:1b}}] Item.tag.BlockEntityTag.Items[{Slot:9b}] unless entity @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:gray_shulker_box",Count:1b,tag:{BlockEntityTag:{Items:[{Slot:9b, id:"minecraft:crafting_table",tag:{Placeholder:1}}]}}}}] run function ac_lib:advanced_crafter/drop_items/9
+
 execute if data entity @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:gray_shulker_box",Count:1b}}] Item.tag.BlockEntityTag.Items[{Slot:10b}] run function ac_lib:advanced_crafter/drop_items/10
 
 execute if data entity @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:gray_shulker_box",Count:1b}}] Item.tag.BlockEntityTag.Items[{Slot:11b}] run function ac_lib:advanced_crafter/drop_items/11

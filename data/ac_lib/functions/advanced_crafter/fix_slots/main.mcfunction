@@ -16,9 +16,6 @@ execute unless data block ~ ~ ~ Items[{Slot:6b}].tag.Placeholder run replaceitem
 execute unless data block ~ ~ ~ Items[{Slot:8b}].tag.Placeholder if block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:8b}]} run function ac_lib:advanced_crafter/fix_slots/8
 execute unless data block ~ ~ ~ Items[{Slot:8b}].tag.Placeholder run replaceitem block ~ ~ ~ container.8 minecraft:gray_stained_glass_pane{Placeholder: 1, display: {Name: '{"text":" "}'}}
 
-execute unless data block ~ ~ ~ Items[{Slot:9b}].tag.Placeholder if entity @s[tag=!ac_lib_advanced_crafter_sink] if block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:9b}]} run function ac_lib:advanced_crafter/fix_slots/9
-execute unless data block ~ ~ ~ Items[{Slot:9b}].tag.Placeholder if entity @s[tag=!ac_lib_advanced_crafter_sink] run replaceitem block ~ ~ ~ container.9 minecraft:gray_stained_glass_pane{Placeholder: 1, display: {Name: '{"text":" "}'}}
-
 execute unless data block ~ ~ ~ Items[{Slot:13b}].tag.Placeholder if block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:13b}]} run function ac_lib:advanced_crafter/fix_slots/13
 execute unless data block ~ ~ ~ Items[{Slot:13b}].tag.Placeholder run replaceitem block ~ ~ ~ container.13 minecraft:gray_stained_glass_pane{Placeholder: 1, display: {Name: '{"text":" "}'}}
 
@@ -49,4 +46,7 @@ execute if block ~ ~-1 ~ minecraft:hopper{Items:[{Slot:2b,tag:{Placeholder:1}}]}
 execute if block ~ ~-1 ~ minecraft:hopper{Items:[{Slot:3b,tag:{Placeholder:1}}]} run replaceitem block ~ ~-1 ~ container.3 air
 
 execute if block ~ ~-1 ~ minecraft:hopper{Items:[{Slot:4b,tag:{Placeholder:1}}]} run replaceitem block ~ ~-1 ~ container.4 air
+
+execute unless data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.craftingMode if block ~ ~ ~ minecraft:gray_shulker_box{Items:[{Slot:9b}]} run function ac_lib:advanced_crafter/fix_slots/crafting_mode
+execute unless data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.craftingMode run replaceitem block ~ ~ ~ container.9 minecraft:crafting_table{Placeholder: 1, ac_lib: {craftingMode: "default"}, display: {Name: '{"text":"Normal Crafting", "italic": false}'}}
 
