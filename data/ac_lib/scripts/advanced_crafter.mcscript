@@ -401,10 +401,12 @@ positioned('~ ~1 ~') {
 
 #file: ./advanced_crafter/crafted
 modal craftedUtility(slot, slotname) {
-  /execute store result score @s ac_temp run data get block ~ ~ ~ Items[{Slot:$(slot)b}].Count
-  /scoreboard players remove @s ac_temp 1
-  /execute store result block ~ ~ ~ Items[{Slot:$(slot)b}].Count byte 1 run scoreboard players get @s ac_temp
-  /scoreboard players reset @s ac_temp
+  if(!'entity @s[tag=ac_lib_keep_$(slotname)]') {
+    /execute store result score @s ac_temp run data get block ~ ~ ~ Items[{Slot:$(slot)b}].Count
+    /scoreboard players remove @s ac_temp 1
+    /execute store result block ~ ~ ~ Items[{Slot:$(slot)b}].Count byte 1 run scoreboard players get @s ac_temp
+    /scoreboard players reset @s ac_temp
+  }
 }
 
 craftedUtility(1,0)
