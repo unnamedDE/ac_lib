@@ -8,3 +8,5 @@ function ac_lib:advanced_crafter/main
 execute as @a run function ac_lib:creative_menu/give
 clear @a minecraft:gray_stained_glass_pane{Placeholder:1}
 clear @a minecraft:crafting_table{Placeholder:1}
+kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:gray_stained_glass_pane",tag:{Placeholder:1}}}]
+kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:crafting_table",tag:{Placeholder:1}}}]
