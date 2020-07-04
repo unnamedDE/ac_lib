@@ -8,3 +8,4 @@ function ac_lib:advanced_crafter/place/detect
 execute as @e[tag=ac_lib_advanced_crafter] at @s run function #ac_lib:advanced_crafter_recipes
 execute as @e[tag=ac_lib_advanced_crafter] at @s run function ac_lib:advanced_crafter/fix_slots/main
 function ac_lib:advanced_crafter/destroy
+execute as @e[type=armor_stand,tag=ac_lib_advanced_crafter_display] run data merge entity @s {Fire:100s}

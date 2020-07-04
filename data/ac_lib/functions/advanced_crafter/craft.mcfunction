@@ -7,4 +7,4 @@
 advancement revoke @s only ac_lib:craft_advanced_crafter_utility
 recipe take @s ac_lib:advanced_crafter
 clear @s minecraft:structure_void 1
-give @s minecraft:armor_stand{display:{Name:"{\"text\":\"Advanced Crafter\",\"italic\":false}",Lore:["{\"translate\":\"Right-click to place\",\"color\":\"dark_green\",\"italic\":false}"]},CustomModelData:701001,ac_lib:{id:"advanced_crafter"},EntityTag:{NoGravity:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,Tags:["ac_lib_advanced_crafter","ac_lib_advanced_crafter_init"],DisabledSlots:4144959}} 1
+give @s minecraft:armor_stand{display:{Name:"{\"text\":\"Advanced Crafting Table\",\"italic\":false}",Lore:["{\"translate\":\"Right-click to place\",\"color\":\"dark_green\",\"italic\":false}"]},CustomModelData:701001,ac_lib:{id:"advanced_crafter"},EntityTag:{NoGravity:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,PersistenceRequired:1b,Tags:["ac_lib_advanced_crafter","ac_lib_advanced_crafter_init"],DisabledSlots:4144959}} 1
