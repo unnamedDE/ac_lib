@@ -147,105 +147,108 @@ if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.craftingMode') {
   /replaceitem block ~ ~ ~ container.9 minecraft:crafting_table{Placeholder: 1, ac_lib: {craftingMode: "default"}, display: {Name: '{"text":"Normal Crafting", "italic": false}'}}
 }
 #file: ./advanced_crafter/fix_slots/crafting_mode
-/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0]}
+/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0],Tags:["ac_lib_dummy"]}
 positioned('~ ~1 ~') {
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.id set from block ~ ~-1 ~ Items[{Slot:9b}].id
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.Count set from block ~ ~-1 ~ Items[{Slot:9b}].Count
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.tag set from block ~ ~-1 ~ Items[{Slot:9b}].tag
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.id set from block ~ ~-1 ~ Items[{Slot:9b}].id
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.Count set from block ~ ~-1 ~ Items[{Slot:9b}].Count
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.tag set from block ~ ~-1 ~ Items[{Slot:9b}].tag
+  /tag @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] remove ac_lib_dummy
 }
 
 
 #file: ./advanced_crafter/fix_slots/0
-/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0]}
+/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0],Tags:["ac_lib_dummy"]}
 positioned('~ ~1 ~') {
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.id set from block ~ ~-1 ~ Items[{Slot:0b}].id
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.Count set from block ~ ~-1 ~ Items[{Slot:0b}].Count
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.tag set from block ~ ~-1 ~ Items[{Slot:0b}].tag
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.id set from block ~ ~-1 ~ Items[{Slot:0b}].id
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.Count set from block ~ ~-1 ~ Items[{Slot:0b}].Count
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.tag set from block ~ ~-1 ~ Items[{Slot:0b}].tag
+  /tag @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] remove ac_lib_dummy
 }
 
 #file: ./advanced_crafter/fix_slots/4
-/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0]}
+/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0],Tags:["ac_lib_dummy"]}
 positioned('~ ~1 ~') {
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.id set from block ~ ~-1 ~ Items[{Slot:4b}].id
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.Count set from block ~ ~-1 ~ Items[{Slot:4b}].Count
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.tag set from block ~ ~-1 ~ Items[{Slot:4b}].tag
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.id set from block ~ ~-1 ~ Items[{Slot:4b}].id
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.Count set from block ~ ~-1 ~ Items[{Slot:4b}].Count
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.tag set from block ~ ~-1 ~ Items[{Slot:4b}].tag
+  /tag @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] remove ac_lib_dummy
 }
 
 #file: ./advanced_crafter/fix_slots/6
-/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0]}
+/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0],Tags:["ac_lib_dummy"]}
 positioned('~ ~1 ~') {
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.id set from block ~ ~-1 ~ Items[{Slot:6b}].id
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.Count set from block ~ ~-1 ~ Items[{Slot:6b}].Count
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.tag set from block ~ ~-1 ~ Items[{Slot:6b}].tag
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.id set from block ~ ~-1 ~ Items[{Slot:6b}].id
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.Count set from block ~ ~-1 ~ Items[{Slot:6b}].Count
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.tag set from block ~ ~-1 ~ Items[{Slot:6b}].tag
+  /tag @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] remove ac_lib_dummy
 }
 #file: ./advanced_crafter/fix_slots/8
-/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0]}
+/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0],Tags:["ac_lib_dummy"]}
 positioned('~ ~1 ~') {
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.id set from block ~ ~-1 ~ Items[{Slot:8b}].id
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.Count set from block ~ ~-1 ~ Items[{Slot:8b}].Count
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.tag set from block ~ ~-1 ~ Items[{Slot:8b}].tag
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.id set from block ~ ~-1 ~ Items[{Slot:8b}].id
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.Count set from block ~ ~-1 ~ Items[{Slot:8b}].Count
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.tag set from block ~ ~-1 ~ Items[{Slot:8b}].tag
+  /tag @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] remove ac_lib_dummy
 }
-/*
-#file: ./advanced_crafter/fix_slots/9
-/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0]}
-positioned('~ ~1 ~') {
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.id set from block ~ ~-1 ~ Items[{Slot:9b}].id
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.Count set from block ~ ~-1 ~ Items[{Slot:9b}].Count
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.tag set from block ~ ~-1 ~ Items[{Slot:9b}].tag
-}
-*/
 #file: ./advanced_crafter/fix_slots/13
-/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0]}
+/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0],Tags:["ac_lib_dummy"]}
 positioned('~ ~1 ~') {
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.id set from block ~ ~-1 ~ Items[{Slot:13b}].id
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.Count set from block ~ ~-1 ~ Items[{Slot:13b}].Count
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.tag set from block ~ ~-1 ~ Items[{Slot:13b}].tag
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.id set from block ~ ~-1 ~ Items[{Slot:13b}].id
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.Count set from block ~ ~-1 ~ Items[{Slot:13b}].Count
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.tag set from block ~ ~-1 ~ Items[{Slot:13b}].tag
+  /tag @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] remove ac_lib_dummy
 }
 
 #file: ./advanced_crafter/fix_slots/15
-/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0]}
+/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0],Tags:["ac_lib_dummy"]}
 positioned('~ ~1 ~') {
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.id set from block ~ ~-1 ~ Items[{Slot:15b}].id
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.Count set from block ~ ~-1 ~ Items[{Slot:15b}].Count
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.tag set from block ~ ~-1 ~ Items[{Slot:15b}].tag
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.id set from block ~ ~-1 ~ Items[{Slot:15b}].id
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.Count set from block ~ ~-1 ~ Items[{Slot:15b}].Count
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.tag set from block ~ ~-1 ~ Items[{Slot:15b}].tag
+  /tag @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] remove ac_lib_dummy
 }
 #file: ./advanced_crafter/fix_slots/17
-/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0]}
+/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0],Tags:["ac_lib_dummy"]}
 positioned('~ ~1 ~') {
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.id set from block ~ ~-1 ~ Items[{Slot:17b}].id
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.Count set from block ~ ~-1 ~ Items[{Slot:17b}].Count
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.tag set from block ~ ~-1 ~ Items[{Slot:17b}].tag
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.id set from block ~ ~-1 ~ Items[{Slot:17b}].id
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.Count set from block ~ ~-1 ~ Items[{Slot:17b}].Count
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.tag set from block ~ ~-1 ~ Items[{Slot:17b}].tag
+  /tag @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] remove ac_lib_dummy
 }
 
 #file: ./advanced_crafter/fix_slots/18
-/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0]}
+/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0],Tags:["ac_lib_dummy"]}
 positioned('~ ~1 ~') {
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.id set from block ~ ~-1 ~ Items[{Slot:18b}].id
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.Count set from block ~ ~-1 ~ Items[{Slot:18b}].Count
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.tag set from block ~ ~-1 ~ Items[{Slot:18b}].tag
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.id set from block ~ ~-1 ~ Items[{Slot:18b}].id
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.Count set from block ~ ~-1 ~ Items[{Slot:18b}].Count
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.tag set from block ~ ~-1 ~ Items[{Slot:18b}].tag
+  /tag @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] remove ac_lib_dummy
 }
 
 #file: ./advanced_crafter/fix_slots/22
-/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0]}
+/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0],Tags:["ac_lib_dummy"]}
 positioned('~ ~1 ~') {
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.id set from block ~ ~-1 ~ Items[{Slot:22b}].id
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.Count set from block ~ ~-1 ~ Items[{Slot:22b}].Count
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.tag set from block ~ ~-1 ~ Items[{Slot:22b}].tag
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.id set from block ~ ~-1 ~ Items[{Slot:22b}].id
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.Count set from block ~ ~-1 ~ Items[{Slot:22b}].Count
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.tag set from block ~ ~-1 ~ Items[{Slot:22b}].tag
+  /tag @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] remove ac_lib_dummy
 }
 
 #file: ./advanced_crafter/fix_slots/24
-/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0]}
+/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0],Tags:["ac_lib_dummy"]}
 positioned('~ ~1 ~') {
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.id set from block ~ ~-1 ~ Items[{Slot:24b}].id
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.Count set from block ~ ~-1 ~ Items[{Slot:24b}].Count
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.tag set from block ~ ~-1 ~ Items[{Slot:24b}].tag
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.id set from block ~ ~-1 ~ Items[{Slot:24b}].id
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.Count set from block ~ ~-1 ~ Items[{Slot:24b}].Count
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.tag set from block ~ ~-1 ~ Items[{Slot:24b}].tag
+  /tag @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] remove ac_lib_dummy
 }
 #file: ./advanced_crafter/fix_slots/26
-/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0]}
+/summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0],Tags:["ac_lib_dummy"]}
 positioned('~ ~1 ~') {
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.id set from block ~ ~-1 ~ Items[{Slot:26b}].id
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.Count set from block ~ ~-1 ~ Items[{Slot:26b}].Count
-  /data modify entity @e[type=item,limit=1,sort=nearest] Item.tag set from block ~ ~-1 ~ Items[{Slot:26b}].tag
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.id set from block ~ ~-1 ~ Items[{Slot:26b}].id
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.Count set from block ~ ~-1 ~ Items[{Slot:26b}].Count
+  /data modify entity @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] Item.tag set from block ~ ~-1 ~ Items[{Slot:26b}].tag
+  /tag @e[type=item,limit=1,sort=nearest,tag=ac_lib_dummy] remove ac_lib_dummy
 }
 
 #file: ./advanced_crafter/crafted
