@@ -48,6 +48,9 @@ asat('@e[type=armor_stand,tag=!ac_lib_advanced_crafter_init,tag=ac_lib_advanced_
 
 
 #file: ./advanced_crafter/fix_slots/main
+// data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.0
+
+/function ac_lib:advanced_crafter/fix_slots/clear
 
 if(!'data block ~ ~ ~ Items[{Slot:0b}].tag.Placeholder' && 'entity @s[tag=!ac_lib_advanced_crafter_trash_can]') {
   if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:0b}]}') {
@@ -55,17 +58,47 @@ if(!'data block ~ ~ ~ Items[{Slot:0b}].tag.Placeholder' && 'entity @s[tag=!ac_li
   }
   /replaceitem block ~ ~ ~ container.0 minecraft:gray_stained_glass_pane{Placeholder: 1, display: {Name: '{"text":" "}'}}
 }
+if(!'data block ~ ~ ~ Items[{Slot:1b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.0') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:1b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/1
+  }
+  /replaceitem block ~ ~ ~ container.1 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
+}
+if(!'data block ~ ~ ~ Items[{Slot:2b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.1') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:2b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/2
+  }
+  /replaceitem block ~ ~ ~ container.2 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
+}
+if(!'data block ~ ~ ~ Items[{Slot:3b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.2') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:3b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/3
+  }
+  /replaceitem block ~ ~ ~ container.3 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
+}
 if(!'data block ~ ~ ~ Items[{Slot:4b}].tag.Placeholder') {
   if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:4b}]}') {
     /function ac_lib:advanced_crafter/fix_slots/4
   }
   /replaceitem block ~ ~ ~ container.4 minecraft:gray_stained_glass_pane{Placeholder: 1, display: {Name: '{"text":" "}'}}
 }
+if(!'data block ~ ~ ~ Items[{Slot:5b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.9') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:5b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/5
+  }
+  /replaceitem block ~ ~ ~ container.5 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
+}
 if(!'data block ~ ~ ~ Items[{Slot:6b}].tag.Placeholder') {
   if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:6b}]}') {
     /function ac_lib:advanced_crafter/fix_slots/6
   }
   /replaceitem block ~ ~ ~ container.6 minecraft:gray_stained_glass_pane{Placeholder: 1, display: {Name: '{"text":" "}'}}
+}
+if(!'data block ~ ~ ~ Items[{Slot:7b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsOut.0') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:7b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/7
+  }
+  /replaceitem block ~ ~ ~ container.7 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
 }
 if(!'data block ~ ~ ~ Items[{Slot:8b}].tag.Placeholder') {
   if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:8b}]}') {
@@ -81,17 +114,47 @@ if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.Placeholder' && 'entity @s[tag=!ac_li
   /replaceitem block ~ ~ ~ container.9 minecraft:gray_stained_glass_pane{Placeholder: 1, display: {Name: '{"text":" "}'}}
 }
 */
+if(!'data block ~ ~ ~ Items[{Slot:10b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.3') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:10b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/10
+  }
+  /replaceitem block ~ ~ ~ container.10 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
+}
+if(!'data block ~ ~ ~ Items[{Slot:11b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.4') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:11b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/11
+  }
+  /replaceitem block ~ ~ ~ container.11 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
+}
+if(!'data block ~ ~ ~ Items[{Slot:12b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.5') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:12b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/12
+  }
+  /replaceitem block ~ ~ ~ container.12 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
+}
 if(!'data block ~ ~ ~ Items[{Slot:13b}].tag.Placeholder') {
   if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:13b}]}') {
     /function ac_lib:advanced_crafter/fix_slots/13
   }
   /replaceitem block ~ ~ ~ container.13 minecraft:gray_stained_glass_pane{Placeholder: 1, display: {Name: '{"text":" "}'}}
 }
+if(!'data block ~ ~ ~ Items[{Slot:14b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.10') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:14b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/14
+  }
+  /replaceitem block ~ ~ ~ container.14 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
+}
 if(!'data block ~ ~ ~ Items[{Slot:15b}].tag.Placeholder') {
   if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:15b}]}') {
     /function ac_lib:advanced_crafter/fix_slots/15
   }
   /replaceitem block ~ ~ ~ container.15 minecraft:gray_stained_glass_pane{Placeholder: 1, display: {Name: '{"text":" "}'}}
+}
+if(!'data block ~ ~ ~ Items[{Slot:16b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsOut.1') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:16b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/16
+  }
+  /replaceitem block ~ ~ ~ container.16 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
 }
 if(!'data block ~ ~ ~ Items[{Slot:17b}].tag.Placeholder') {
   if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:17b}]}') {
@@ -105,17 +168,47 @@ if(!'data block ~ ~ ~ Items[{Slot:18b}].tag.Placeholder' && 'entity @s[tag=!ac_l
   }
   /replaceitem block ~ ~ ~ container.18 minecraft:gray_stained_glass_pane{Placeholder: 1, display: {Name: '{"text":" "}'}}
 }
+if(!'data block ~ ~ ~ Items[{Slot:19b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.6') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:19b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/19
+  }
+  /replaceitem block ~ ~ ~ container.19 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
+}
+if(!'data block ~ ~ ~ Items[{Slot:20b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.7') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:20b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/20
+  }
+  /replaceitem block ~ ~ ~ container.20 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
+}
+if(!'data block ~ ~ ~ Items[{Slot:21b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.8') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:21b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/21
+  }
+  /replaceitem block ~ ~ ~ container.21 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
+}
 if(!'data block ~ ~ ~ Items[{Slot:22b}].tag.Placeholder') {
   if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:22b}]}') {
     /function ac_lib:advanced_crafter/fix_slots/22
   }
   /replaceitem block ~ ~ ~ container.22 minecraft:gray_stained_glass_pane{Placeholder: 1, display: {Name: '{"text":" "}'}}
 }
+if(!'data block ~ ~ ~ Items[{Slot:23b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.11') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:23b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/23
+  }
+  /replaceitem block ~ ~ ~ container.23 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
+}
 if(!'data block ~ ~ ~ Items[{Slot:24b}].tag.Placeholder') {
   if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:24b}]}') {
     /function ac_lib:advanced_crafter/fix_slots/24
   }
   /replaceitem block ~ ~ ~ container.24 minecraft:gray_stained_glass_pane{Placeholder: 1, display: {Name: '{"text":" "}'}}
+}
+if(!'data block ~ ~ ~ Items[{Slot:25b}].tag.Placeholder' && 'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsOut.2') {
+  if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:25b}]}') {
+    /function ac_lib:advanced_crafter/fix_slots/25
+  }
+  /replaceitem block ~ ~ ~ container.25 minecraft:gray_stained_glass_pane{Placeholder: 1, PlaceholderTemp:1, display: {Name: '{"text":" "}'}}
 }
 if(!'data block ~ ~ ~ Items[{Slot:26b}].tag.Placeholder') {
   if('block ~ ~ ~ minecraft:barrel{Items:[{Slot:26b}]}') {
@@ -146,6 +239,57 @@ if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.craftingMode') {
   }
   /replaceitem block ~ ~ ~ container.9 minecraft:crafting_table{Placeholder: 1, ac_lib: {craftingMode: "default"}, display: {Name: '{"text":"Normal Crafting", "italic": false}'}}
 }
+
+#file: ./advanced_crafter/fix_slots/clear
+
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.0' && 'data block ~ ~ ~ Items[{Slot:1b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.1 air
+}
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.1' && 'data block ~ ~ ~ Items[{Slot:2b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.2 air
+}
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.2' && 'data block ~ ~ ~ Items[{Slot:3b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.3 air
+}
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.3' && 'data block ~ ~ ~ Items[{Slot:10b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.10 air
+}
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.4' && 'data block ~ ~ ~ Items[{Slot:11b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.11 air
+}
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.5' && 'data block ~ ~ ~ Items[{Slot:12b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.12 air
+}
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.6' && 'data block ~ ~ ~ Items[{Slot:19b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.19 air
+}
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.7' && 'data block ~ ~ ~ Items[{Slot:20b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.20 air
+}
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.8' && 'data block ~ ~ ~ Items[{Slot:21b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.21 air
+}
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.9' && 'data block ~ ~ ~ Items[{Slot:5b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.5 air
+}
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.10' && 'data block ~ ~ ~ Items[{Slot:14b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.14 air
+}
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsIn.11' && 'data block ~ ~ ~ Items[{Slot:23b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.23 air
+}
+
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsOut.0' && 'data block ~ ~ ~ Items[{Slot:7b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.7 air
+}
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsOut.1' && 'data block ~ ~ ~ Items[{Slot:16b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.16 air
+}
+if(!'data block ~ ~ ~ Items[{Slot:9b}].tag.ac_lib.blockedSlotsOut.2' && 'data block ~ ~ ~ Items[{Slot:25b}].tag.PlaceholderTemp') {
+  /replaceitem block ~ ~ ~ container.25 air
+}
+
+
 #file: ./advanced_crafter/fix_slots/crafting_mode
 /summon item ~ ~1 ~ {Item:{id:"minecraft:arrow",Count:1b},Motion:[0.0,0.25,0.0],Tags:["ac_lib_dummy"]}
 positioned('~ ~1 ~') {
